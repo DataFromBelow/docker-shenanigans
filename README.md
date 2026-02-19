@@ -10,8 +10,6 @@ This project is all about docker, so i recommend downloading and installing Dock
 - Caffeine
 
 
-
-
 ### Installing
 
 ### Executing Program
@@ -24,6 +22,7 @@ This project is all about docker, so i recommend downloading and installing Dock
 ### Delopgave 3
 I know on a conceptual level on what to, how it works and where it should be done, but i cannot get it to work in any way that matters.
 
+Have docker make me the webserver and the db and then connect them, then add a volume for persistence. I cannot figure out the commands.
 
 # Help
 You are beyond help.
