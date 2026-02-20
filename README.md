@@ -18,6 +18,7 @@ This project is all about docker, so i recommend downloading and installing Dock
 ## Known Issues
 
 ### Delopgave 2
+As per this assignment, simply having docker compose and build the .yaml by itself will solve it, but the CMD needs to have ["python", "app.py"] for it to run. The clamps are important.
 
 ### Delopgave 3
 I know on a conceptual level on what to, how it works and where it should be done, but i cannot get it to work in any way that matters.
