@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webserver med Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .count {
+            font-size: 2em;
+            color: #1976d2;
+            font-weight: bold;
+        }
+        .recent {
+            background-color: #f3e5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .recent ul {
+            list-style: none;
+            padding: 0;
+        }
+        .recent li {
+            padding: 5px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .recent li:last-child {
+            border-bottom: none;
+        }
+        .badge {
+            background-color: #4caf50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐳 Webserver med Database! <span class="badge">Persistent</span></h1>
+        
+        <div class="info">
+            <p><strong>Tidspunkt:</strong> {{ time }}</p>
+            <p><strong>Antal besøg (gemt i database):</strong> <span class="count">{{ visits }}</span></p>
+        </div>
+        
+        <div class="recent">
+            <h3>📊 Seneste 5 besøg:</h3>
+            <ul>
+                {% for visit in recent_visits %}
+                    <li>{{ visit }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <p>Denne webserver gemmer besøg i en PostgreSQL database.</p>
+        <p><strong>Prøv dette:</strong> Stop og genstart containerne med <code>docker-compose down</code> og <code>docker-compose up</code> - besøgstælleren husker stadig!</p>
+        <p><em>Det er fordi data er gemt i et Docker volume som overlever genstart.</em></p>
+    </div>
+</body>
+</html>
