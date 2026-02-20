@@ -1,4 +1,5 @@
-# docker-ingumanizer
+# docker-shenanigans
+
 We are testing and fooling around with docker. Nothing more and nothing less. 
 
 There will be 4 folders in total.
