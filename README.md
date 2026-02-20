@@ -34,7 +34,10 @@ Yorl (Do not contact)
 DataFromBelow (Do not contact)
 
 # Version History
-- 0.2
+- 0.2.2
+  - added more folders and files
+  - going back to basics
+- 0.2.1
   - More folders
 - 0.1
   - Initial Release
