@@ -9,7 +9,7 @@ This project is all about docker, so i recommend downloading and installing Dock
 
 ### Dependencies
 - Caffeine
-
+- Docker, I recommend Docker Desktop 
 
 ### Installing
 
